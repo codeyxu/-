@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃的张胖胖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .td01 {
+            width: 50px;
+            height:50px;
+            background-color: aqua;
+        }
+        
+        #map {
+            width: 500px;
+            height:500px;
+            z-index: -99;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* background-color: aqua; */
+        }
+        
+        table {
+            position: absolute;
+         
+            top: 0;
+            left: 0;
+            z-index: -99;
+            
+            /* background-color: aqua; */
+        }
+        
+        button {
+            width: 30px;
+            height:12px;
+        }
+        
+        div {
+            background: url();
+        }
+        
+        .beijing {
+            width: 50px;
+            height: 50px;
+          background-color: black;
+            background-size: 50px 50px;
+            border-radius: 50%;
+        }
+        
+        .shiwu {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: bisque;
+        }
+        
+        .shenti {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(31, 238, 100);
+        }
+        .bbbb {
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            opacity: 0.4;
+            text-align: center;
+            line-height: 500px;
+         
+
+        }
+      h1 {
+          position: absolute;
+          left: 500px;
+          top: 0;
+      }
+      button {
+          display: block;
+          width: 50px;
+          height: 30px;
+margin-left: 30px;
+          position: absolute;
+          left: 500px;
+          top: 30px;
+          
+      }
+
+      .btn1 {
+          display: block;
+          width: 50px;
+          height: 30px;
+margin-left: 30px;
+          position: absolute;
+          left: 550px;
+          top: 30px;
+          
+      }
+      
+      .btn2 {
+          display: block;
+          width: 50px;
+          height: 30px;
+margin-left: 30px;
+          position: absolute;
+          left: 600px;
+          top: 30px;
+          
+      }
+      
+      
+    </style>
+</head>
+
+<body>
+    <table border="1" cellspacing="0" cepadding="0">
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+        <tr>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+            <td class = "td01"></td>
+        </tr>
+    </table>
+    <div id="map"></div>
+    <h1>您的得分为0分</h1>
+    <button class = "btn1">快</button>
+    <button class = "btn2">中</button>
+    <button class = "btn3">慢</button>
+<div class = "bbbb"><img src="https://i02piccdn.sogoucdn.com/2db3ddccebce461e" alt=""></div>
+
+    <script>
+var bbbb = document.querySelector(".bbbb");
+var st = document.querySelector(".shenti")
+bbbb.onclick = function(){
+    fn();
+ 
+    this.style.display = "none"
+  
+
+}
+function fn(){
+    var h1 = document.querySelector('h1');
+        var m = 0
+        var map = document.querySelector('#map');
+        var bodyNodes = []; //放置身体
+        function creareDiv(color) {
+            var div = document.createElement('div');
+            div.style.width = "50px";
+            div.style.height = "50px";
+            div.style.backgroundColor = color;
+            div.style.position = "absolute";
+            div.style.left = parseInt(Math.random() * 10) * 50 + "px";
+            div.style.top = parseInt(Math.random() * 10) * 50 + "px";
+            map.appendChild(div);
+            return div;
+        }
+        var timer = setInterval(move, 800);
+        var btns = document.querySelectorAll('button');
+        btns[0].onclick = function() {
+            clearInterval(timer);
+            timer = setInterval(move, 200);
+        }
+
+        btns[1].onclick = function() {
+            clearInterval(timer);
+            timer = setInterval(move, 400);
+        }
+
+        btns[2].onclick = function() {
+            clearInterval(timer);
+            timer = setInterval(move, 700);
+        }
+        var tou = creareDiv()
+        tou.className = "beijing";
+        tou.value = "左";                                             
+        var shiwu = creareDiv();
+        shiwu.className = "shiwu"
+        document.addEventListener('keydown', function(e) {
+            if (
+                e.keyCode == 38) {
+                if (tou.value != '下') {
+                    tou.value = "上"
+                }
+            }
+
+            if (e.keyCode == 40) {
+                if (tou.value != "上") {
+                    tou.value = "下"
+                }
+            }
+
+            if (e.keyCode == 37) {
+                if (tou.value != "右") {
+                    tou.value = "左"
+                }
+            }
+
+            if (e.keyCode == 39) {
+                if (tou.value != "左") {
+                    tou.value = "右"
+                }
+            }
+        })
+
+
+        function move() {
+            if (bodyNodes.length > 0) {
+                for (var n = bodyNodes.length - 1; n >= 0; n--) {
+                    switch (bodyNodes[n].value) {
+
+                        case "左":
+                            bodyNodes[n].style.left = parseInt(bodyNodes[n].style.left) - 50 + 'px'
+                            break;
+                        case "右":
+                            bodyNodes[n].style.left = parseInt(bodyNodes[n].style.left) +50 + 'px'
+                            break;
+                        case "上":
+                            bodyNodes[n].style.top = parseInt(bodyNodes[n].style.top) - 50 + 'px';
+                            break;
+                        case "下":
+                            bodyNodes[n].style.top = parseInt(bodyNodes[n].style.top) + 50 + 'px';
+                            break;
+
+                    }
+                    if (n == 0) {
+                        bodyNodes[n].value = tou.value
+                    } else {
+                        bodyNodes[n].value = bodyNodes[n - 1].value
+                    }
+
+                }
+
+            }
+            switch (tou.value) {
+
+                case "左":
+                    tou.style.left = parseInt(tou.style.left) -50 + 'px'
+                    break;
+                case "右":
+                    tou.style.left = parseInt(tou.style.left) + 50 + 'px'
+                    break;
+                case "上":
+                    tou.style.top = parseInt(tou.style.top) -50 + 'px';
+                    break;
+                case "下":
+                    tou.style.top = parseInt(tou.style.top) + 50 + 'px';
+                    break;
+            }
+            if (tou.offsetLeft < -50 || tou.offsetLeft > 500 || tou.offsetTop < -0 || tou.offsetTop > 500) {
+            tou.style.display = "none"
+         shiwu.style.display = "none"
+         alert("你的得分为"+m)
+         window.location.href=window.location.href;
+       
+            }
+
+
+
+            // 碰撞检测
+
+            if (tou.style.left == shiwu.style.left && tou.style.top == shiwu.style.top) {
+                m = m + 10;
+                h1.innerHTML = "您的得分是" + m + "分";
+                //    chan生一个身体需要找到当前的最后一块
+                // 把所有身体放到一个数组里
+                var bodyNode = creareDiv();
+                bodyNode.className = "shenti"
+                var lastNode
+                if (bodyNodes.length > 0) {
+                    lastNode = bodyNodes[bodyNodes.length - 1]
+                } else {
+                    lastNode = tou; 
+                }
+
+
+                switch (lastNode.value) {
+                    case "左":
+                        bodyNode.style.left = parseInt(lastNode.style.left) + 50 + 'px';
+                        bodyNode.style.top = lastNode.style.top;
+                        break;
+                    case "右":
+                        bodyNode.style.left = parseInt(lastNode.style.left) - 50+ 'px';
+                        bodyNode.style.top = lastNode.style.top;
+                        break;
+
+                    case "上":
+                        bodyNode.style.top = parseInt(lastNode.style.top) + 50 + 'px';
+                        bodyNode.style.left = lastNode.style.left;
+                        break;
+                    case "下":
+                        bodyNode.style.top = parseInt(lastNode.style.top) - 50 + 'px'
+                        bodyNode.style.left = lastNode.style.left;
+                        break;
+                }
+                bodyNode.value = lastNode.value
+                bodyNodes.push(bodyNode);
+
+                //    食物位置更新
+                shiwu.style.top = parseInt(Math.random() * 10) * 50 + 'px'
+                shiwu.style.left = parseInt(Math.random() * 10) * 50 + 'px'
+
+
+            }
+
+
+        }
+
+        console.log(tou.offsetLeft);
+}
+
+    </script>
+</body>
+
+</html>
